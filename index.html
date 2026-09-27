@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comapa Materiais Para Construção | Rondonópolis - MT</title>
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Comapa Materiais Para Construção - Damasceno Comércio de Materiais para Construção LTDA. Tudo para sua obra em Rondonópolis - MT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1E3A8A; /* Azul Corporativo */
+      --primary-hover: #1D4ED8;
+      --accent: #F97316; /* Laranja Construção */
+      --accent-hover: #EA580C;
+      --dark: #0F172A;
+      --light-bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #334155;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --radius: 12px;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: var(--dark);
+      color: #94A3B8;
+      padding: 8px 0;
+      font-size: 0.85rem;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info span {
+      margin-right: 20px;
+    }
+
+    .top-bar-info i {
+      color: var(--accent);
+      margin-right: 6px;
+    }
+
+    /* Container Global */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      background: var(--primary);
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .brand-text h1 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-text span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 58, 138, 0.88)), 
+                  url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.2);
+      color: #FDBA74;
+      border: 1px solid rgba(249, 115, 22, 0.4);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #CBD5E1;
+      margin-bottom: 35px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid #64748B;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: white;
+    }
+
+    /* Cards Informativos (Sobre/Cadastrais) */
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h3 {
+      font-size: 2.25rem;
+      color: var(--dark);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Grid de Serviços */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 35px 25px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary);
+      transition: background 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-card:hover::before {
+      background: var(--accent);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(30, 58, 138, 0.08);
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h4 {
+      font-size: 1.25rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Informações de Registro */
+    .info-section {
+      background: white;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .info-box {
+      background: var(--light-bg);
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .info-box label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .info-box p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .status-tag {
+      display: inline-block;
+      background: #DEF7EC;
+      color: #03543F;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Contato e Localização */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .contact-item i {
+      font-size: 1.25rem;
+      color: var(--accent);
+      background: rgba(249, 115, 22, 0.1);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .contact-item h5 {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .contact-item p, .contact-item a {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--dark);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+    }
+
+    .mail-box {
+      background: var(--light-bg);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border: 1px dashed var(--border-color);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #94A3B8;
+      padding: 40px 0 20px;
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1E293B;
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-info">
+        <span><i class="fa-solid fa-location-dot"></i> Rondonópolis - MT</span>
+        <span><i class="fa-solid fa-phone"></i> (66) 4266-162</span>
+      </div>
+      <div>
+        <span>CNPJ: 04.769.422/0001-87</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="brand">
+          <div class="brand-icon">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div class="brand-text">
+            <h1>COMAPA</h1>
+            <span>MATERIAIS PARA CONSTRUÇÃO</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#empresa">Sobre a Empresa</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge"><i class="fa-solid fa-shield-halved"></i> Tradição e Confiança desde 2001</span>
+        <h2>Soluções Completas em Materiais para Construção</h2>
+        <p>A Comapa é referência na distribuição de materiais essenciais para sua obra ou reforma em Rondonópolis e região. Qualidade, agilidade e atendimento de excelência.</p>
+        <div class="hero-btns">
+          <a href="#servicos" class="btn-primary"><i class="fa-solid fa-list-check"></i> Conhecer Nossos Serviços</a>
+          <a href="tel:664266162" class="btn-outline"><i class="fa-solid fa-phone"></i> Ligar Agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Serviços Principais -->
+  <section id="servicos" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h3>Nossos Principais Serviços</h3>
+        <p>Tudo o que você precisa, do alicerce ao acabamento</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-trowel-bricks"></i>
+          </div>
+          <h4>Estrutura e Insumos</h4>
+          <p>Fornecimento de cimento, tijolos, ferragens, areia, brita e materiais estruturais das melhores marcas do mercado para garantir a solidez da sua construção.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-faucet-drip"></i>
+          </div>
+          <h4>Hidráulica e Elétrica</h4>
+          <p>Linha completa de tubos, conexões, caixas d'água, fiação elétrica, disjuntores e iluminação para instalações seguras e eficientes.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-paint-roller"></i>
+          </div>
+          <h4>Acabamento e Pintura</h4>
+          <p>Tintas, argamassas, rejuntes, revestimentos e ferramentas de acabamento que dão o toque final ideal ao seu projeto residencial ou comercial.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h4>Logística e Entrega</h4>
+          <p>Atendimento rápido e entrega pontual diretamente no canteiro de obras em Rondonópolis e áreas circunvizinhas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Informações da Empresa (Dados Oficiais) -->
+  <section id="empresa" class="section-padding info-section">
+    <div class="container">
+      <div class="section-header">
+        <h3>Informações de Registro Cadastral</h3>
+        <p>Transparência e conformidade jurídica corporativa</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <label>Razão Social</label>
+          <p>Damasceno Comercio de Materiais Para Construcao LTDA</p>
+        </div>
+
+        <div class="info-box">
+          <label>Nome Fantasia</label>
+          <p>Comapa Materiais Para Construcao</p>
+        </div>
+
+        <div class="info-box">
+          <label>CNPJ</label>
+          <p>04.769.422/0001-87</p>
+        </div>
+
+        <div class="info-box">
+          <label>Situação Cadastral</label>
+          <p><span class="status-tag">ATIVA</span> <small style="font-size:0.8rem; color:var(--text-muted)">(desde 10/07/2004)</small></p>
+        </div>
+
+        <div class="info-box">
+          <label>Data de Abertura</label>
+          <p>08/11/2001 (24 anos)</p>
+        </div>
+
+        <div class="info-box">
+          <label>Tipo / Natureza Jurídica</label>
+          <p>Matriz / Sociedade Empresária Limitada</p>
+        </div>
+
+        <div class="info-box">
+          <label>Capital Social</label>
+          <p>R$ 4.200.000,00</p>
+        </div>
+
+        <div class="info-box">
+          <label>Enquadramento / Opções</label>
+          <p>Sem Enquadramento <br><small style="font-size:0.8rem; color:var(--text-muted)">Simples / MEI: Não</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato e Localização -->
+  <section id="contato" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h3>Localização e Contato</h3>
+        <p>Entre em contato ou venha nos visitar em nosso endereço</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Detalhes de Contato -->
+        <div class="contact-card">
+          <h4 style="font-size: 1.4rem; margin-bottom: 25px; color: var(--dark);">Atendimento Direto</h4>
+          
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h5>Telefone</h5>
+              <p><a href="tel:664266162">(66) 4266-162</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h5>E-mail</h5>
+              <p><a href="mailto:maria@comapa.com.br">maria@comapa.com.br</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Endereço e Correspondência -->
+        <div class="contact-card">
+          <h4 style="font-size: 1.4rem; margin-bottom: 25px; color: var(--dark);">Endereço & Correspondência</h4>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <div>
+              <h5>Logradouro</h5>
+              <p>Rua Fernando Correa da Costa, 2623</p>
+              <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Bairro Vila Andreia</p>
+              <p style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Rondonópolis - MT | CEP: 78705-600</p>
+            </div>
+          </div>
+
+          <div class="mail-box">
+            <h5 style="color: var(--dark); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px;">Dados para Correspondência</h5>
+            <p style="font-size: 0.9rem; color: var(--text-main); font-weight: 500; line-height: 1.4;">
+              Comapa Materiais Para Construcao<br>
+              Damasceno Comercio de Materiais Para Construcao LTDA<br>
+              Rua Fernando Correa da Costa, 2623<br>
+              Vila Andreia - Rondonópolis MT<br>
+              CEP: 78705-600
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4 style="color: white; font-size: 1.2rem; margin-bottom: 5px;">Comapa Materiais Para Construção</h4>
+          <p>Damasceno Comércio de Materiais para Construção LTDA</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Comapa Materiais Para Construção. Todos os direitos reservados. CNPJ: 04.769.422/0001-87</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
